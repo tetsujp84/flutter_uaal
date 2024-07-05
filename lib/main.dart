@@ -60,16 +60,14 @@ class _MainSceneWidgetState extends State<MainSceneWidget> {
                     },
                     child: const Text('<'),
                   ),
-                  const SizedBox(width: 10),
                   SizedBox(
-                    width: 250, // テキスト表示領域の幅を固定
+                    width: 200, // テキスト表示領域の幅を固定
                     child: Text(
                       displayedText,
                       style: const TextStyle(fontSize: 20),
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  const SizedBox(width: 10),
                   ElevatedButton(
                     onPressed: () {
                       _unityWidgetController!.postMessage("Manager", 'NextAnimation', "");
