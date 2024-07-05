@@ -16,12 +16,14 @@ public class AvatarMessageManager : MonoBehaviour
         UpdateAnimation();
     }
 
+    // Nativeから実行される
     public void NextAnimation()
     {
         animationIndex = (animationIndex + 1) % animations.Length;
         UpdateAnimation();
     }
 
+    // Nativeから実行される
     public void PreviousAnimation()
     {
         animationIndex = (animationIndex - 1 + animations.Length) % animations.Length;
@@ -34,6 +36,7 @@ public class AvatarMessageManager : MonoBehaviour
         SendAnimationName();
     }
 
+    // Nativeに通知する
     private void SendAnimationName()
     {
         UnityMessageManager.Instance.SendMessageToFlutter($"animation?{animations[animationIndex].name}");

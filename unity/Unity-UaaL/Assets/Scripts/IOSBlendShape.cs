@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Unity.Collections;
+using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 #if UNITY_IOS
 using UnityEngine.XR.ARKit;
 #endif
 using VRM;
 
+// 参考：https://qiita.com/amachi0/items/d830bd89a18b78745b84
 public class IOSBlendShape : MonoBehaviour
 {
 #if UNITY_IOS
